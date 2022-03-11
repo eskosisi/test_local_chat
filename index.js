@@ -14,6 +14,7 @@ connections = [];
 io.sockets.on("connection", function (socket) {
   console.log("Successfull connection!");
   connections.push(socket);
+  console.log(connections);
 
   socket.on("disconnect", function (data) {
     connections.splice(connections.indexOf(socket), 1);
